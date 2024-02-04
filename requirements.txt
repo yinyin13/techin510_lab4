@@ -1,3 +1,4 @@
 streamlit
 requests
 BeautifulSoup4
+openmeteo_requests
