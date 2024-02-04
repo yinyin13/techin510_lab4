@@ -19,7 +19,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-To access the web app directly online, go to [Word Bank 🔡](https://yinyin13-todo.azurewebsites.net)
+To access the web app directly online, go to [World Clock ⏰](yinyin13-worldclock.azurewebsites.net)
 ## Lessons Learned
 - I'm now more familiar with OOP, web scraping, and calling APIs
 - I learned how to use regex and the `zoneinfo` library
