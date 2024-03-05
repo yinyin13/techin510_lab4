@@ -1,5 +1,5 @@
 # ⏰ World Clock
-This is a web app that provides the current time and real0time weather information for selected countries. Users can hoose up to 4 countries to monitor, and the weather data is fetched every hour.
+This is a web app that provides the current time and real-time weather information for selected countries. Users can choose up to 4 countries to monitor, and the weather data is fetched every hour.
 ## How to run
 1. Make sure that Python is installed on your device
 2. Clone this repo
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-To access the web app directly online, go to [Word Bank 🔡](https://yinyin13-todo.azurewebsites.net)
+To access the web app directly online, go to [World Clock ⏰](http://yinyin13-worldclock.azurewebsites.net/)
 ## Lessons Learned
 - I'm now more familiar with OOP, web scraping, and calling APIs
 - I learned how to use regex and the `zoneinfo` library
