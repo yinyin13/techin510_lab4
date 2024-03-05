@@ -44,10 +44,14 @@ if selected_countries:
             # Convert to specific timezone inside strftime
             date_str = time_now.astimezone(ZoneInfo(country)).strftime("%Y-%m-%d")
             time_str = time_now.astimezone(ZoneInfo(country)).strftime("%H:%M:%S")
+
+            # Reformat country name
+            country = country.split("/")[-1].replace("_", " ")
             
             # Fetch weather only every hour
             if cycles % 3600 == 0: 
-                latitude, longitude = get_location_coordinates(country)
+                latitude = get_location_coordinates(country)[0]
+                longitude = get_location_coordinates(country)[1]
                 temperature, weather_description = get_weather(latitude, longitude)
                 weather_description = interpret_weather_code(weather_description)
 
