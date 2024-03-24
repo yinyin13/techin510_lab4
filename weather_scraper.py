@@ -1,21 +1,16 @@
 import requests
 import openmeteo_requests
 import sqlite3
+from geopy.geocoders import Nominatim
 
 def get_location_coordinates(location_query):
-    location_url = "https://nominatim.openstreetmap.org/search"
-    params = {
-        'q': location_query,
-        'format': 'json',
-    }
-    response = requests.get(location_url, params=params)
-    location_data = response.json()
-
-    if location_data:
-        latitude = location_data[0]['lat']
-        longitude = location_data[0]['lon']
-
-    return latitude, longitude
+    geolocator = Nominatim(user_agent="my_geocoder")
+    location = geolocator.geocode(location_query)
+    if location:
+        return location.latitude, location.longitude
+    else:
+        print("Location not found.")
+        return None, None
 
 def get_weather(latitude, longitude):
     # Setup the Open-Meteo API client

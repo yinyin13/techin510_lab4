@@ -2,3 +2,4 @@ streamlit
 requests
 BeautifulSoup4
 openmeteo-requests
+geopy
